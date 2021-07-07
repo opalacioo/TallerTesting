@@ -1,0 +1,26 @@
+#enconding: utf-8
+execution:
+- concurrency: 1
+  hold-for: 3m
+  ramp-up: 2m
+  scenario: sample
+  
+scenarios:
+  sample:
+    headers:
+        Connection: close
+    script: clima_cpt.jmx
+
+reporting:
+- module: final-stats
+  dump-xml: clima_cpt.xml
+
+modules:
+  jmeter:
+    path: C:\apache-choucair
+    
+settings:
+  check-interval: 5s
+  default-executor: jmeter
+
+provisioning: local
