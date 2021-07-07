@@ -18,7 +18,7 @@ pipeline
                 echo 'Actualizar fuentes'
                 checkout([$class: 'GitSCM', branches: [[name: "master"]], 
                 doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [
-                [credentialsId: "opalacio1", url: "https://github.com/opalacioo/pruebaperfor.git"]
+                [credentialsId: "opalacio1", url: "https://github.com/opalacioo/TallerTesting.git"]
                 ]])
             }
         }
